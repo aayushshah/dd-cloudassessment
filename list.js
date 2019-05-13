@@ -15,7 +15,7 @@ export async function main(event, context, callback) {
             }
             // Invoke the listObjectV2 method for S3
             s3.listObjectsV2(params, (err, data) => {
-                // If error occured send error message
+                // If error occurs send error message
                 if (err) {
                     const response = {
                         body: JSON.stringify({ 'ErrorMessage': 'Error while fetching list of files' })
