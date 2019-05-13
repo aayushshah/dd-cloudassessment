@@ -1,6 +1,6 @@
 /***
  * Author: Aayush Shah
- * Send Email provided message as input by user 
+ * Send Email with the message provided as input by the user 
  */
 import AWS from "aws-sdk"
 
@@ -43,7 +43,7 @@ export async function main(event, context, callback) {
         callback(null, response)
     } catch (e) {
         console.log(e)
-        // If error occured send error message
+        // If error occurs send error message
         const response = {
             body: JSON.stringify({"Error": "Error while sending the Email"})
         }
